@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Organic Kitchen Shanghai</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          /* by default hide all radio_content div elements except first element */
+          $(".content .radio_content").hide();
+          $(".content .radio_content:first-child").show();
+
+          /* when any radio element is clicked, Get the attribute value of that clicked radio element and show the radio_content div element which matches the attribute value and hide the remaining tab content div elements */
+          $(".radio_wrap").click(function(){
+            var current_raido = $(this).attr("data-radio");
+            $(".content .radio_content").hide();
+            $("."+current_raido).show();
+          });
+        });
+      </script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $(".accordion_header").click(function(){
+             $(".accordion_header").removeClass("active");
+             $(this).addClass("active");
+          });
+        });
+      </script>
+    </head>
+  <body>
+<!-- Vertical Navigation -->
+    <header>
+      <div class="content">
+        <img id="mainlogo" src="./Resources/LOGO TRANSPARENT GRID.png"></img>
+          <nav class="desktop">
+            <ul>
+              <li class="hover-underline"><a href="#about-us">Home</a></li>
+              <li class="hover-underline" href="#home">Our Story</li>
+              <li><a href="./Resources/Delivery Menu Final 0513.pdf">Our Menu</a></li>
+              <li class="hover-underline"> <a href="#gallery">Gallery</a></li>
+              <li class="hover-underline"> <a href="#contact">Contact</a></li>
+              <li class="button">Order Online</li>
+              <li><a href="www.instagram.com">
+                <img class="icon" src="./Resources/insta icon.png"></a></li> 
+            </ul>
+          </nav>
+      </div> 
+    </header>
+<!-- Main Content -->
+    <div class="main-content">
+      <!-- About Us Section -->
+      <div id="about-us">
+          <div class="center left">
+            <div class="image-container">
+              <img src="./resources/building04.jpg" />
+            </div>
+            <div class="content">
+              <h1>Welcome to the neighborhood</h1>
+              <p>What fueled us is the belief that food should taste good and do you good. We purchase our products from passionate local organic growers carefully sourced while keeping our environmental impact and food miles super-low. we are not just about organic produce we are passionate for foods of tastes from culinary delights of countries we have traveled.  Our dishes and ingredients are carefully selected and tested to make sure that we are delivering authentic tastes from the great dishes we love. What really made us believe we were on the right track was the passion and support of people who eat with us, but the foremost message was that you are the source of our inspiration and ambition. We hope that you continue to eat with us and thanks for your support so far. We have gone a long way and we think there is still a lot of room for improvement. 
+              </p>
+            </div>
+          </div>
+      </div>
+    <!-- Our Menu -->
+      <div class="wrapper" id="menu-press">
+        <div class="content">
+            <h1>The Menu</h1>
+            <h2>Delicious Plates</h2>
+        </div>
+            <div class="radio_tabs">
+              <label class="radio_wrap" data-radio="radio_1">
+                <input type="radio" name="foods" class="input" checked>
+                <span class="radio_mark">
+                      Appetizer
+                </span>
+              </label>
+              <label class="radio_wrap" data-radio="radio_2">
+                <input type="radio" name="foods" class="input">
+                <span class="radio_mark">
+                      Soups
+                </span>
+              </label>
+              <label class="radio_wrap" data-radio="radio_3">
+                <input type="radio" name="foods" class="input">
+                <span class="radio_mark">
+                      Salads
+                </span>
+              </label>
+              <label class="radio_wrap" data-radio="radio_4">
+                <input type="radio" name="foods" class="input">
+                <span class="radio_mark">
+                      Asian Dishes
+                </span>
+              </label>
+              <label class="radio_wrap" data-radio="radio_5">
+                <input type="radio" name="foods" class="input">
+                <span class="radio_mark">
+                      Wraps
+                </span>
+              </label>
+              <label class="radio_wrap" data-radio="radio_6">
+                <input type="radio" name="foods" class="input">
+                <span class="radio_mark">
+                      Pasta
+                </span>
+              </label>
+              <label class="radio_wrap" data-radio="radio_7">
+                <input type="radio" name="foods" class="input">
+                <span class="radio_mark">
+                      Special Dishes
+                </span>
+              </label>
+            </div>
+    <!-- appetizer section -->
+          <div class="content">
+              <div class="radio_content radio_1">
+                <div class="hummus">
+                  <h2>Hummus, Pita and Veggies</h2>
+                  <h3>Home-made hummus using organic sesame seeds dip served with veggie sticks and organic pita bread</h3>
+                </div>
+                <div class="roasted-red-hummus">
+                  <h2>Roasted Red Pepper Hummus</h2>
+                  <h3>Home-made roasted red-pepper hummus using organic sesame seeds dip served with veggie sticks and organic pita bread</h3>
+                </div>
+                <div class="med-platter">
+                  <h2>Meditteranean Platter</h2>
+                  <h3>Platter with kafta grass fed beef patty, falafel, yogurt sauce, cornichons and olives
+                  </h3>
+                </div class="veg-platter">
+                  <h2>Vegeterian Platter</h2>
+                  <h3>Home-made hummus made with organic sesame seeds, falafel, veggies sticks, tabouli, salad and organic pita bread
+                  </h3>
+                <div class="bowl-falafels">
+                  <h2>Bowl of Fafafels</h2>
+                  <h3>Mediterranean Falafels made with chickpeas and parsley served with tahini sauce</h3>
+                </div>
+                <div class="lebanese-grapes">
+                  <h2>Lebanese Stuffed Vine Grapes</h2>
+                  <h3>4 pieces of lebanese stuffed vine grapes</h3>
+                </div>
+              </div>  
+              <div class="radio_content radio_2">
+                <div class="beetroot-soup">
+                    <h2>Beetroot Borscht Soup</h2>
+                    <h3>Soup made with beetroot with chicken and veggies</h3>
+                </div>
+                <div class="chicken-soup">
+                    <h2>Chicken Ball Soup</h2>
+                    <h3>Minced chicken ball soup made with homemade chicken broth</h3>
+                </div>
+                <div class="lentil-soup">
+                    <h2>Lemony Lentil Soup</h2>
+                    <h3>Lentil soup made with vegetable broth, lemon and mediterranean spices</h3>
+                </div>
+              </div>
+              <div class="radio_content radio_3">
+                <div class="falafel-salad">
+                    <h2>Falafel and Avocado Salad</h2>
+                    <h3>3 pieces of falafel, mixed salad, avocado, tomatoes and parsley. Served with tahini sauce</h3>
+                </div>
+                <div class="caesar-salad">
+                    <h2>Mythic Caesar Salad</h2>
+                    <h3>Marinated Chicken, crisp romaine salad, garlic croutons tossed with homemade anchovy sauce</h3>
+                </div>
+                <div class="cucumber-salad">
+                    <h2>Cucumber, feta and tomato salad</h2>
+                    <h3>Cucumber, feta, tomatoes with lemon and extra virgin oil dressing</h3>
+                </div>
+                <div class="beetroot-salad">
+                    <h2>Funky Beetroot Salad</h2>
+                    <h3>Beetroot, potato and cucumber salad</h3>
+                  </div>
+                <div class="olivie-salad">
+                    <h2>Olivie Salad</h2>
+                    <h3>Potato, carrot, cucumber pickles and chicken</h3>
+                </div>
+              </div>  
+              <div class="radio_content radio_4">
+                <div class="stir-fry-bean">
+                    <h2>Stir-Fry Black Bean Chicken and Cashew Nuts</h2>
+                    <h3>Chicken sautée with black bean, veggies and cashew nuts. Served with rice</h3>
+                </div>
+                <div class="stir-fry-asparagus">
+                    <h2>Stir-Fry Chicken, Asparagus, Tofu and Kale</h2>
+                    <h3>Chicken sautée with asparagus, tofy and kale. Served with rice</h3>
+                </div>
+                <div class="stir-fry-tofu">
+                    <h2>Stir-Fry Tofu, Vegetables and Mushrooms</h2>
+                    <h3>Sautée tofu with miced vegetables and mushrooms. Served with rice</h3>
+                </div>
+                <div class="stir-fry-peppers">
+                    <h2>Stir-Fry Chicken and Green Peppers</h2>
+                    <h3>Chicken sautée with green peppers. Served with rice</h3>
+                </div>
+              </div>
+              <div class="radio_content radio_5">
+                <div class="shawarma-wrap">
+                    <h2>Shawarma Wrap</h2>
+                    <h3>Minced chicken marinated with shawarma spices, mixed lettuce, tomatoes, pickles, tahini sauce and garlic sauce</h3>
+                </div>
+                <div class="falafel-wrap">
+                    <h2>Falafel Wrap</h2>
+                    <h3>Falafels with mixed lettuce, tomatoes, pickles, tahini and garlic sauce</h3>
+                </div>
+                <div class="chicken-tikka">
+                    <h2>Chicken Tikka Wrap</h2>
+                    <h3>Chicken marinated with tikka spices, mixed lettuce, tomatoes, pickles, tahini and garlic sauce</h3>
+                </div>
+              </div>
+              <div class="radio_content radio_6">
+                <div class="mama-pasta">
+                    <h2>Mama's Pasta</h2>
+                    <h3>Creamy tomato sauce made with garlic topped with sautée chicken</h3>
+                </div>
+                <div class="tuna-pasta">
+                    <h2>Tuna Pesto Pasta</h2>
+                    <h3>Homemade pesto sauce, tuna and feta cheese</h3>
+                </div>
+                <div class="carbonara-pasta">
+                    <h2>Carbonara Pasta</h2>
+                    <h3>Silky egg carbonara sauce with bacon</h3>
+                </div>
+                <div class="bolognese-pasta">
+                    <h2>Classic Bolognese Pasta</h2>
+                    <h3>Minced beef sauce made with a creamy tomato broth and italian herbs</h3>
+                </div>
+              </div>
+              <div class="radio_content radio_7">
+                <div class="chicken-curry">
+                    <h2>Chicken Tikka Masala Curry</h2>
+                    <h3>Chicken marinated in special indian spices mixed with Indian Masala Sauce. Served with rice</h3>
+                </div>
+                <div class="mexican-quinoa">
+                    <h2>Mexican Quinoa Chili with Pita Bread</h2>
+                    <h3>Quinoa, black beans, kidney beans, tomato sauce, cheddar and sour cream</h3>
+                </div>
+                <div class="chicken-couscous">
+                    <h2>Chicken Couscous with Hummus and Pita Bread</h2>
+                    <h3>Tabouli with mint and parsley with lemon dressing topped with chicken. Served with homemade pita bread</h3>
+                </div>
+                <div class="veggie-burger">
+                    <h2>Ok Veggie Burger</h2>
+                    <h3>Patties made with cilantro, onions, and chickpeas topped with arugula, avocado, creamy tahini sauce and tomato slices</h3>
+                </div>
+                <div class="hearty-lasagna">
+                    <h2>Hearty Beef Lasagna</h2>
+                    <h3>Homemade Beef Sauce layered with pasta sheets oven-cooked</h3>
+                </div>
+                <div class="beef-stroganov">
+                    <h2>Beef Stroganov</h2>
+                    <h3>Grass-fed Beef tenderloin cooked in stroganov sauce with mushrooms. Served with Mash Potatoes</h3>
+                </div>
+                <div class="chicken-kiev">
+                    <h2>Chicken Kiev with Mash Potatoes</h2>
+                    <h3>Breaded Free-Range Chicken served with Mash Potatoes</h3>
+                </div>
+              </div>
+          </div>  
+      </div>
+    <!-- Galerry Section -->
+      <div id="gallery">
+        <div class="content center">
+          <h2>We have been serving delicious food since 2008!</h2>
+          <h3>Some fun photos of the great times we shared with friends and stores we operated!</h3>
+        </div>
+        <div class="images-container">
+          <div class="image-container" id="picture-1">
+            <div class="description">
+              <h3>Our first store in the former French Concession on Fuxing West Road opened in 2010</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, consequuntur.</h4>
+            </div>
+          </div>
+          <div class="image-container" id="picture-2">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, illo!</h4>
+            </div>
+          </div>
+          <div class="image-container" id="picture-3">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, in!</h4>
+            </div>
+          </div>
+          <div class="image-container" id="picture-4">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, vitae?</h4>
+            </div>
+          </div>  
+          <div class="image-container" id="picture-5">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, commodi.</h4>
+            </div>
+          </div>
+          <div class="image-container" id="picture-6">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit.</h4>
+            </div>
+          </div>
+          <div class="image-container" id="picture-7">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, culpa.</h4>
+            </div>
+          </div>
+          <div class="image-container" id="picture-8">
+            <div class="description">
+              <h3>Lorem ipsum dolor sit amet.</h3>
+              <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, omnis?</h4>
+            </div>
+          </div> 
+        </div> 
+      </div>
+<!-- review section -->
+      <div id="reviews">
+        <div class="title">
+          <h1>Good Words</h1>
+          <h2>Reviews</h2>
+        </div>
+          <div class="reviews-container">
+            <div class="review-container">
+              <div class="person1">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <p>I'm impressed with the wide variety of vegan options on this menu. The Lental Burger is amazing! It has a lot of flavor and is served with huge potato wedges. The other veggie burger is also amazingly tasty. I've tried the falafel wrap, which to me is fine, but my husband loves it. They may seem like they aren't busy, but in actuality if you go in and sit for a while you'll see they get a TON of delivery for their food. For the hour I was there six or more delivery guys showed up to collect their food. They also show cheesy American movies too, that helps the ambiance.</p>
+                <h4>Mina, Trip Advisor, 2020</h4>
+              </div>
+            </div>
+            <div class="review-container">  
+              <div class="person2">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <p>If you want a break from dumplings, noodles, rice, and want some organic California-ish hippie food, this is place.
+                  Quinoa, Kale, Avocado, fresh vegetable juices.
+                  I'm an adventurous eater, but this was a welcome break of familiar food for my digestive system.
+                  Quite reasonably priced for the quality.</p>
+                <h4>Alex, Trip Advisor, 2019</h3>
+              </div>
+             </div> 
+            <div class="review-container">  
+              <div class="person3">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <p>Food here is excellent! I would eat here every day if I could.</p>
+                <h4>Clayton, Google Reviews, 2018</h4>
+              </div>
+            </div>
+            <div class="review-container">  
+              <div class="person4">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <p>I experienced many organic and vegetarian restaurants that were tasty enough. However, this one is super tasty. I usually take the wrap, the curry, and the soup. </p>
+                <h4>Jon, Trip Advisor, 2019</h4>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Notice Section Delivery Only! -->      
+      <div id="menu-delivery">
+        <div class="page-padding">
+          <div class="container-small">
+            <div class="padding-vertical padding-xxhuge">
+              <div class="text-align-center">
+                <div class="margin-small margin-xsmall">
+                  <div class="text">Menu</div>
+                </div>
+                <div class="margin-bottom margin-small">
+                  <div class="text-big">
+                    <h1>What's Up?</h1></div>
+                </div>    
+                <div class="margin-bottom margin-small">
+                    <p>Would you like to see our menu? Click the button Below. We are making food deliveries through our partners: <br> <a class="partner" href="https://newsite.sherpa.com.cn/#/index">Sherpa's</a>, <a class="partner" href="http://eleme.com">Eleme</a>, <a class="partner" href="https://about.meituan.com/en">Meituan</a> and <a class="partner" href="https://jinshisong.com/en/gourmet?utm=undefined">JSS.</a></p>
+                </div>
+                <div class="button-row button-row-center">
+                  <div class="button-wrapper button-wrapper-center">
+                    <a href="#menu" class="button-view invert-colors w-button">View Menu</a>
+                  </div>
+                  <div class="button-wrapper button-wrapper-center">
+                  <a class="button-tertiary invert-colors margin-left margin-xxsmall w-inline-block" href="#questions">
+                    <div>Do you have questions about the menu?</div>
+                    <div class="button-tertiary_icon w-embed">
+                      <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                      </svg>
+                    </div>
+                  </a>  
+                </div> 
+              </div>
+            </div>    
+          </div>  
+          <!-- Frequently asked questions -->
+      <div id="questions">
+        <div class="page-padding">
+          <div class="container-small">
+            <div class="padding-vertical padding-xhuge">
+              <div class="margin-bottom margin-xxlarge">
+                <div class="text-align-center">
+                  <div class="max-width-large">
+                    <div class="margin-bottom margin-xsmall">
+                      <div class="text-width-semibold">
+                        Frequently Asked Questions
+                      </div>
+                    <div class="margin-bottom margin-small">
+                      <h1>Just a question</h1>
+                    </div>
+                    </div class="text-size-medium">
+                      <p>We have tried to answer some of your questions</p>
+                    </div> 
+                  </div>
+                </div>
+              
+        <!-- Accordion Section -->
+                <div id="accordion-faq">  
+                  <div class="rapper">
+                    <div class="accordion_wrap accordion_1">
+                      <div class="accordion_header">
+                        How to place an order at Organic Kitchen Shanghai?
+                      </div>
+                      <div class="accordion_body">
+                        <p>To place an order you need to contact us via our wechat group, please find our QRcode in our contact section. Scan and join. We will send you our menu in our group chat and you will be able to place an order. Alternatively, you can place an order with our partners: Eleme, Meituan, JSS and Sherpas</p>
+                      </div>
+                    </div>
+                    <div class="accordion_wrap accordion_2">
+                      <div class="accordion_header">
+                        where do you source your ingredients?
+                      </div>
+                      <div class="accordion_body">
+                        <p>We source our ingredients from passionate organic farmers in Chongming island which is around one hour by car. Our farmers are organic certified and the island is isolated from polluted areas. This place is ideal for organic produce farming so we have selected very carefully farmers that best suits our needs. By sourcing our ingredients in proximity not only makes our food cheaper to buy but it also impacts our carbon footprint in a positive way. Therefore we benefit from our neutral carbon footprint and our food tastes amazing without chemicals that harm our body and our lands. We aim to contribute to a better world</p>
+                      </div>
+                    </div>
+                    <div class="accordion_wrap accordion_3">
+                      <div class="accordion_header">
+                        How can I group order?
+                      </div>
+                      <div class="accordion_body">
+                        <p>Please scan our Qrcode on our contact section, someone from our team will immediately add you and discuss the dishes and the quantities you wish to order. Large orders get 5% discount if your order is above 500 RMB.</p>
+                      </div>
+                    </div>
+                    <div class="accordion_wrap accordion_4">
+                      <div class="accordion_header">
+                        Allergens
+                      </div>
+                      <div class="accordion_body">
+                        <p>First of all, we have a fairly wide selection of vegetarian dishes in our central kitchen. Allergies and dietary requirements can also be shared with our staff in our Wechat group before you make an order. It is important, however, that in case of serious allergies, you look at the menu beforehand and of course indicate it to the waiters on this evening. We will do our best to serve our tapas in the most appropriate way.</p>
+                      </div>
+                    </div>
+                    <div class="accordion_wrap accordion_5">
+                      <div class="accordion_header">
+                        How to eat at Organic Kitchen Shanghai?
+                      </div>
+                      <div class="accordion_body">
+                        <p>Our culinary is baded on a mediterranean diet. We have  a great range of foods that are vegan and vegeterian. We also have meat based dishes. Our food are cooked on the spot as fresh as possible. We offer appetizers, sandwiches, pasta, main dishes, soups, salads and home-made desserts. We have healthy smoothies, juices and coffees.</p>
+                      </div>
+                    </div>
+                  </div>	
+                </div> 
+                <div class="margin-top margin-xxlarge">
+                  <div class="text-align-center">
+                    <div class="max-width-medium align-center">
+                      <div class="margin-bottom margin-xsmall">
+                        <h2 class="heading-medium">Still a question?</h2>
+                      </div>
+                      <p class="text-size-medium">Please fill in our contact form, we will get in touch with you soon.</p>
+                      <div class="margin-top margin-small">
+                        <a href="#contact" class="button-secondary w-button">Contact</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>    
+<!-- Contact Section -->
+      <div id="contact" class="section-contact">
+        <div class="page-padding">
+          <div class="container-large">
+            <div class="padding-vertical padding-xhuge">
+              <div class="margin-bottom margin-large">
+                <div class="max-width-large">
+                  <div class="margin-bottom margin-xsmall">
+                    <h3>Contact</h3>
+                  </div>
+                  <div class="margin-bottom margin-small">
+                    <h2>What's happening?</h2>  
+                  </div>
+                  <p class="text-size-medium">Let us know what's on your mind, we'll get back to you soon.</p>
+                <div class="contact-box-container">
+                <div class="contact-box">
+                  <div class="contact-left">
+                    <form id="contact-form-a" name="contact-form-a" data-name="contact form a" method="get" class="thecontact-form-a" aria-label="contact form a">
+                      <div class="formfield2-colum">
+                        <div class="formfield1-wrapper">
+                          <label for="contact-a-firstname" class="field-label">First Name</label>
+                          <input type="text" class="form-input w-input" maxlength="256" name="contact-a-firstname" data-name="contact a firstname" placeholder id="contact-a-firstname" required="required">
+                          </input>
+                        </div>
+                        <div class="formfield1-wrapper">
+                          <label for="contact-a-lastname" class="field-label">Surname</label>
+                          <input type="text" class="form-input w-input" maxlength="256" name="contact-a-lastname" data-name="contact a lastname" placeholder id="contact-a-lastname" required>
+                          </input>
+                        </div>
+                      </div>
+                      <div class="formfield2-colum">  
+                        <div class="formfield1-wrapper">
+                          <label for="contact-a-email" class="field-label">E-mail Address</label>
+                          <input type="email" class="form-input w-input" maxlength="256" name="contact-a-email" data-name="contact a email" placeholder id="contact-a-email" required="required">
+                          </input>
+                        </div>
+                        <div class="formfield1-wrapper">
+                          <label for="contact-a-telephone" class="field-label">Telephone</label>
+                          <input type="tel" class="form-input w-input" maxlength="256" name="contact-a-telephone" data-name="contact a telephone" placeholder id="contact-a-telephone" required="required">
+                          </input>
+                        </div>
+                      </div>
+                      <div class="formfield1-wrapper">
+                        <label for="contact-a-select" class="field-label">Choose a topic</label>
+                        <select id="contact-a-select" name="contact-a-select" data-name="contact a select" required="required" class="form-input select w-select">
+                          <option value>What kind of question?</option>
+                          <option value="general-question">General Question</option>
+                          <option value="question-about-the-menu">Question about the menu</option>
+                          <option value="group-orders">Group orders</option>
+                          <option value="allergen-question">Allergen question</option>
+                        </select>
+                      </div>  
+                      <div class="formfield1-wrapper">
+                        <label for="contact-a-message" class="field-label">Message</label>
+                        <textarea placeholder="Type your message here" maxlength="5000" id="contact-a-message" name="contact-a-message" data-name="contact a message" required class="form-input text-area w-input"></textarea>
+                      </div>
+                      <div class="margin-bottom margin-xsmall">
+                        <label id="contact-checkbox" class="w-checkbox checkbox-wrapper">
+                          <div class="w-checkbox-input custom-form-checkbox-input form-checkbox"></div>
+                        <input type="checkbox" id="contact-checkbox" name="contact checkbox" data-name="contact checkbox" required style="opacity:0; position:absolute; z-index:-1;"></input>
+                        <span for="contact-checkbox" class="form-checkbox-label text-size-small w-form-label">I want to subscribe for free membership at Organic Kitchen Wechat group</span>
+                        </label>
+                      </div>
+                      <input type="submit" value="May it be!" data-wait="Please wait..." id="w-node-1" class="button3 w-button"></input>
+                    </form>
+                    <div class="success-message w-form-done">
+                      <div class="success-text">Thank you! Your message has been sent successfully! We will contact your shortly!</div>
+                    </div>
+                    <div class="error-message w-form-fail">
+                      <div class="error-message">Ooooops! Please try again!</div>
+                    </div> 
+                  </div>
+                  <div class="contact-right">
+                      <div class="contact-a-item">
+                        <div class="margin-bottom margin-xsmall">
+                          <img src="https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f588c0a3ec21042bff116c_whatsapp.svg" loading="lazy" alt="Wechat icon for displaying the possibility of contacting La Barraca via WeChat and a direct link to this environment in order to chat directly" class="icon-1x1-small">
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <div class="heading-small">Wechat</div>
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <div>Available 24/7</div>
+                        </div>
+                        <div class="wechat-qrcode">
+                          <img src="./Resources/qrcode OK.png" alt="qrcode wechat group" width="50px" height="50px">
+                        </div>
+                      </div>  
+                      <div class="contact-a-item">
+                        <div class="margin-bottom margin-xsmall">
+                          <img src="https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f6db20ad0d127882e3ef1c_la-barraca-phone.svg" loading="lazy" alt="Phone icon for displaying Organic Kitchen phone number" class="icon-1x1-small">
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <div class="heading-small">Telephone</div>
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <div>Reachable <strong>from 15:00 on Thu-Sun</strong></div>
+                        </div>  
+                          <a href="tel:+8618616612183">+86 18616612183</a>
+                      </div>  
+                      <div class="contact-a-item">
+                        <div class="margin-bottom margin-xsmall">
+                          <img src="https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f6db33a6a757396a6b3520_la-barraca-route.svg" loading="lazy" alt="Route planner icon to display the address and link to the route planner at Organic Kitchen" class="icon-1x1-small">                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <div class="heading-small">Address</div>
+                        </div>
+                        <div class="margin-bottom margin-esmall">
+                          <div>Shanghai, Yude Road, Nanjing Road, No.235 1F 23B</div>
+                        </div>
+                        <div class="button-row">
+                          <a href="https://www.google.co.jp/maps/place/%E9%98%BF%E5%96%B3%E9%98%BF%E5%96%B3/@31.2221637,121.4438695,21z/data=!4m13!1m7!3m6!1s0x35b270100667c9d7:0xf6af51a6ece7c7cd!2sNan+Jing+Xi+Lu,+China,+200031!3b1!8m2!3d31.22298!4d121.44603!3m4!1s0x35b26fffb4c2736f:0x4d6a2289075e7abb!8m2!3d31.22213!4d121.44395?hl=en-GB&authuser=0" target="_blank" class="button-tertiary w-inline-block">
+                            <div><strong>Plan route</strong></div>
+                            <div class="button-tertiary_icon w-embed">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
+                            </svg>
+                            </div>
+                          </a>  
+                        </div>
+                      </div>  
+                      <div class="contact-a-item">
+                        <div class="margin-bottom margin-xsmall">
+                          <img src="https://uploads-ssl.webflow.com/61f53606a22f7e1a572993f6/61f6db5cd426dded54361410_la-barraca-clock.svg" loading="lazy" alt="Clock icon to show opening hours of Organic Kitchen" class="icon-1x1-small">
+                        </div>
+                        <div class="margin-bottom margin-xxsmall">
+                          <div class="heading-small">Online Orders Opening Hours</div>
+                        </div>
+                        <div class="margin-bottom margin-small">
+                          <div class="textbox-shopclosed">
+                            <div>Temporarily Closed Until<br>Lock-Down is Over</div>
+                            </div>
+                            <div>Monday-Sunday 10 am to 10 pm</div>      
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="page-padding">
+          <div class="container-large">
+            <div class="padding-vertical padding-large">
+              <div class="padding-bottom padding-xxlarge">
+                <div class="w-layout-grid footer-4-top-wrapper">
+                  <div id="logo-home-direct">
+                    <a href="#main-content" id="take-logo-home-direct" class="footer-4-logo direct-home">
+                      <img src="./Resources/LOGO TRANSPARENT GRID.png" loading="lazy" alt="Organic Kitchen Logo Small" width="50px" height="50px">
+                    </a>
+                  </div>
+                  <div class="w-layout-grid footer-4_link-list">
+                    <a href="#about-us" class="footer-4-link">Back to top</a>
+                    <a href="#menu-press" class="footer-4-link">The Menu</a>
+                    <a href="#reviews" class="footer-4-link">The Gallery</a>
+                    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?adgroupsurvey=%7Badgroupsurvey%7D&gclid=CjwKCAjwjZmTBhB4EiwAynRmD2zp7CsB3shA3RqJETpUf4IV75lAJ4BNbrTSducBYBY-A3EAsC71KRoCKKgQAvD_BwE" target="_blank" class="footer-4-link">COVID-19</a>
+                    <a href="#contact" class="footer-4-link">Contact</a>
+                  </div>
+                  <div id="social-media-wrapper" class="footer_4socials-wrapper">
+                    <a href="https://www.instagram.com/organic_kitchen_shanghai/" class="footer-4-social w-inline-block">
+                      <div class="social-icon w-embed">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                      </div>
+                    </a>  
+                    <a href="https://www.facebook.com/OrganicKitchenShanghai" class="footer-4-social w-inline-block">
+                    <div class="social-icon w-embed">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                      viewBox="0 0 23.101 23.101" style="enable-background:new 0 0 23.101 23.101;" xml:space="preserve">
+	                      <path d="M8.258,4.458c0-0.144,0.02-0.455,0.06-0.931c0.043-0.477,0.223-0.976,0.546-1.5c0.32-0.522,0.839-0.991,1.561-1.406
+		                    C11.144,0.208,12.183,0,13.539,0h3.82v4.163h-2.797c-0.277,0-0.535,0.104-0.768,0.309c-0.231,0.205-0.35,0.4-0.35,0.581v2.59h3.914
+		                    c-0.041,0.507-0.086,1-0.138,1.476l-0.155,1.258c-0.062,0.425-0.125,0.819-0.187,1.182h-3.462v11.542H8.258V11.558H5.742V7.643
+		                    h2.516V4.458z"/></svg>
+                    </div>
+                    </a>
+                    <a href="https://web.wechat.com/" class="footer-4-social w-inline-block">
+                      <div class="social-icon w-embed">
+                        <svg enable-background="new 0 0 2499.7 2024.2" viewBox="0 0 2499.7 2024.2" xmlns="http://www.w3.org/2000/svg"><path d="m2499.7 1313.8c0-347.3-335.9-630.6-749.5-630.6s-747.2 283.3-747.2 630.6 335.9 630.6 749.5 630.6c80 0 155.4-9.1 226.2-29.7 20.6-4.6 43.4-2.3 64 6.9l185.1 100.5c11.4 6.9 27.4-4.6 22.8-18.3l-36.6-148.5c-4.6-22.8 2.3-45.7 22.8-59.4 160.1-116.5 262.9-287.9 262.9-482.1zm-1016.8-82.2c-57.1 0-102.8-45.7-102.8-102.8s45.7-102.8 102.8-102.8 102.8 45.7 102.8 102.8-45.7 102.8-102.8 102.8zm505 0c-57.1 0-102.8-45.7-102.8-102.8s45.7-102.8 102.8-102.8 102.8 45.7 102.8 102.8-48 102.8-102.8 102.8z"/><path d="m941.4 1316.1c0-386.1 365.6-699.2 818-699.2h34.3c-73.2-349.6-443.3-616.9-888.9-616.9-500.4 0-904.8 333.6-904.8 747.2 0 228.5 125.7 434.1 322.2 571.2 13.7 9.1 18.3 25.1 16 41.1l-68.5 242.2c-4.6 16 13.7 32 29.7 22.8l267.3-159.9c18.3-11.4 38.8-13.7 59.4-6.9 89.1 22.8 182.8 36.6 278.8 36.6 20.6 0 41.1 0 64-2.3-18.4-57.1-27.5-116.5-27.5-175.9zm267.3-920.8c66.3 0 121.1 54.8 121.1 121.1s-54.8 121.1-121.1 121.1-121.1-54.8-121.1-121.1 54.9-121.1 121.1-121.1zm-607.8 242.2c-66.3 0-121.1-54.8-121.1-121.1s54.8-121.1 121.1-121.1 121.1 54.8 121.1 121.1-52.5 121.1-121.1 121.1z"/></svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+                <div class="line-divider"></div>  
+                <div class="padding-top padding-medium">
+                  <div id="final-text" class="footer-4-credit">
+                    WEBSITE BY
+                    <a href="http//www.rocketfactory.nl" target="_blank">Rocket Factory</a>
+                    &
+                    <a href="http//www.hivecollective.nl" target="_blank">Hive Collective</a>
+                  </div>
+                </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+</body>
+</html>
